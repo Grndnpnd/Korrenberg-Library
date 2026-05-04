@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Library of Korranberg — A Fortress of Knowledge</title>
+<title>The Library of Korranberg — Eight Colleges, One City of Knowledge</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
 <style>
@@ -34,6 +34,9 @@
   --crimson: #7a2020;
   --crimson-bright: #a03030;
   --crimson-glow: rgba(160,40,40,0.3);
+  --sapphire: #4a7ca8;
+  --sapphire-bright: #6fa3ce;
+  --sapphire-glow: rgba(74,124,168,0.25);
   --lamp: rgba(201,168,76,0.15);
 
   --font-display: 'Cinzel', serif;
@@ -1413,23 +1416,23 @@ body {
     </div>
 
     <div class="intro-title">The Library of Korranberg</div>
-    <div class="intro-subtitle">A Fortress of Knowledge</div>
+    <div class="intro-subtitle">A Quarter of the City. A Continent of Knowledge.</div>
     <div class="intro-divider"></div>
 
     <div class="intro-epigraph">
-      "Founded three millennia ago by Dorius ir'Korran,<br>
-      where knowledge is both shield and sword,<br>
-      and every stone holds a secret."
+      "Founded three millennia past by Loremaster Dorius Alyre ir'Korran,<br>
+      who would not see the deeds of dragons forgotten,<br>
+      nor the words of mortals lost to the wind."
     </div>
 
-    <div class="intro-seal">Zilargo — Eight Colleges — Codex Vault</div>
+    <div class="intro-seal">Eight Colleges &nbsp;·&nbsp; Codex Vault of Aureon &nbsp;·&nbsp; Seat of the Triumvirate</div>
 
-    <button class="intro-btn" onclick="enterLibrary()">Enter the Fortress</button>
+    <button class="intro-btn" onclick="enterLibrary()">Enter the Library</button>
   </div>
 
   <div class="intro-footer">
-    House Sivis Enclave Adjacent — Triumvirate Seat<br>
-    Arrow Keys / WASD to Walk — Click Books to Read — F to Search
+    Korranberg, Zilargo &nbsp;—&nbsp; Beneath the Seawall Mountains<br>
+    House Sivis Citadel Adjacent &nbsp;·&nbsp; Arrow Keys / WASD to Walk &nbsp;·&nbsp; F to Search
   </div>
 </div>
 
@@ -1444,7 +1447,7 @@ body {
       <img src="images/brass-gear.png" alt="">
       <span>Korranberg</span>
     </div>
-    <div class="header-location" id="header-location">Chamber Flamespire</div>
+    <div class="header-location" id="header-location">Loremaster Hall</div>
     <nav class="header-nav">
       <button class="header-btn active" onclick="switchView('spatial')" id="btn-spatial">Walk</button>
       <button class="header-btn" onclick="switchView('atrium')" id="btn-atrium">Atrium</button>
@@ -1478,14 +1481,14 @@ body {
     <button class="dir-nav nav-s" onclick="chamberNav(0,1)">&#9660;</button>
 
     <!-- Chamber Label -->
-    <div class="chamber-label" id="chamber-label">Chamber Flamespire — Level 0, Column 0</div>
+    <div class="chamber-label" id="chamber-label">Loremaster Hall — Level 0, Column 0</div>
   </div>
 
   <!-- Atrium View -->
   <div class="atrium-view" id="atrium-view">
     <div class="atrium-hero">
       <h1>The Atrium of Aureon</h1>
-      <p>Choose a wing of the fortress. Each college guards its own chamber of knowledge.</p>
+      <p>Eight colleges, eight vaults beneath the Seawall Mountains. Each holds its own portion of what mortals have written down.</p>
     </div>
     <div class="wing-grid" id="wing-grid"></div>
   </div>
@@ -1537,12 +1540,12 @@ body {
   <div class="vault-panel">
     <div class="vault-header">
       <h2>🔒 The Codex Vault</h2>
-      <p>Forbidden texts sealed by the Triumvirate. Speak the passphrase, or turn back.</p>
+      <p>Khorvaire's largest shrine to Aureon. Texts here have been sealed by order of the Triumvirate. Speak the passphrase, or turn back.</p>
     </div>
     <div class="vault-prompt" id="vault-prompt">
       <div style="padding:2rem;text-align:center;">
         <input type="text" id="vault-input" placeholder="Speak the passphrase..." onkeydown="handleVaultKey(event)" autocomplete="off">
-        <div class="vault-error" id="vault-error">The Vault remains sealed.</div>
+        <div class="vault-error" id="vault-error">The Vault remains sealed. The Trust has noted your attempt.</div>
         <button class="header-btn" style="margin-top:1rem;border-color:rgba(122,32,32,0.4);color:#c94444;" onclick="attemptVault()">Unlock</button>
       </div>
     </div>
@@ -1579,16 +1582,16 @@ body {
   `
 },</pre>
 
-    <h3>Available Categories (Wings)</h3>
+    <h3>Available Categories (Colleges)</h3>
     <ul>
-      <li><code>history</code> — Wing of Chronicles</li>
-      <li><code>arcana</code> — Wing of Mysteries</li>
-      <li><code>bestiary</code> — Wing of Beasts</li>
-      <li><code>geography</code> — Wing of Maps</li>
-      <li><code>cosmology</code> — Wing of Planes</li>
-      <li><code>prophecy</code> — Wing of Omens</li>
-      <li><code>houses</code> — Wing of Marks</li>
-      <li><code>philosophy</code> — Wing of Thought</li>
+      <li><code>history</code> — College of Chronicles</li>
+      <li><code>arcana</code> — College of the Arcane</li>
+      <li><code>bestiary</code> — College of Living Things</li>
+      <li><code>geography</code> — College of the Cartographers</li>
+      <li><code>cosmology</code> — College of the Outer Spheres</li>
+      <li><code>prophecy</code> — College of the Prophecy</li>
+      <li><code>houses</code> — College of the Marks</li>
+      <li><code>philosophy</code> — College of Thought</li>
     </ul>
 
     <h3>The Codex Vault (Restricted)</h3>
@@ -5350,19 +5353,27 @@ const LIBRARY = {
 
 const VAULT_PASS = "The axis turns, but the record remains.";
 
+// The Eight Colleges of Korranberg — each housed in its own
+// vault beneath the Seawall Mountains. Founded by Dorius Alyre
+// ir'Korran approximately 3,000 years ago.
 const COLLEGE_WINGS = [
-  { id: 'history', name: 'Wing of Chronicles', desc: 'Wars, kingdoms, and the long record of mortal ambition.', icon: '⚔' },
-  { id: 'arcana', name: 'Wing of Mysteries', desc: 'Magic, ritual, and the artifice that shapes the world.', icon: '✦' },
-  { id: 'bestiary', name: 'Wing of Beasts', desc: 'Creatures of Khorvaire, the Mournland, and beyond.', icon: '✶' },
-  { id: 'geography', name: 'Wing of Maps', desc: 'Places, peoples, routes, and the changing face of nations.', icon: '❖' },
-  { id: 'cosmology', name: 'Wing of Planes', desc: 'The thirteen planes, manifest zones, and the Ring of Siberys.', icon: '◎' },
-  { id: 'prophecy', name: 'Wing of Omens', desc: 'The Draconic Prophecy and the signs that guide destiny.', icon: '✹' },
-  { id: 'houses', name: 'Wing of Marks', desc: 'The dragonmarked houses and the commerce of magic.', icon: '◈' },
-  { id: 'philosophy', name: 'Wing of Thought', desc: 'Faith, ethics, and the questions that outlive answers.', icon: '◉' }
+  { id: 'history',    name: "College of Chronicles",  desc: 'The long record of nations, the Last War, and every kingdom that thought itself eternal.',                  icon: '⚔' },
+  { id: 'arcana',     name: "College of the Arcane",   desc: 'Theory, ritual, dragonshard craft, and the artifice the gnomes are not entirely willing to share.',       icon: '✦' },
+  { id: 'bestiary',   name: "College of Living Things",desc: 'Beasts, monsters, magebred stock, and the strangenesses that walk Khorvaire after the Mourning.',          icon: '✶' },
+  { id: 'geography',  name: "College of the Cartographers", desc: 'Maps, routes, peoples, and the borders that have moved more than the readers who study them.',        icon: '❖' },
+  { id: 'cosmology',  name: "College of the Outer Spheres", desc: 'The thirteen planes, the manifest zones, and the slow turning of the Ring of Siberys.',              icon: '◎' },
+  { id: 'prophecy',   name: "College of the Prophecy", desc: 'Stanzas of the Draconic Prophecy, watched in fragments by scholars who do not always survive the watching.', icon: '✹' },
+  { id: 'houses',     name: "College of the Marks",    desc: 'The dragonmarked houses, their commerce, their genealogies, and what they would prefer the public not know.', icon: '◈' },
+  { id: 'philosophy', name: "College of Thought",      desc: 'Faith, ethics, jurisprudence, and the long arguments that outlive the arguers.',                            icon: '◉' }
 ];
 
-const CHAMBER_PREFIXES = ['Ash','Bone','Crypt','Dusk','Ember','Flame','Glyph','Hollow','Iron','Jade','Khyber','Lore','Moon','Night','Oracle','Pyre','Quill','Rune','Shadow','Thorn','Under','Vault','Warding','Xor','Year','Zenith'];
-const CHAMBER_SUFFIXES = ['spire','reach','mark','well','gate','arch','font','keep','fold','mere','vale','ward','sept','haven','fall','crest'];
+// Chamber names are generated from gnomish-scholarly word stock.
+// The Library of Korranberg is a labyrinth of vaults beneath the
+// Seawall Mountains; each reading-room and stack carries a name
+// drawn from gnome tradition, founders' memory, and the long
+// vocabulary of scholarship.
+const CHAMBER_PREFIXES = ['Dorius','Loremaster','Aureon','Sivis','Triumvir','Korran','Quill','Codex','Ledger','Folio','Lexicon','Stanza','Argument','Memoria','Cartograph','Sextant','Compass','Astrolabe','Brass','Lantern','Scrivener','Cipher','Marginal','Glossary','Auditor','Notary'];
+const CHAMBER_SUFFIXES = ['hall','reach','rotunda','gallery','vault','solarium','annex','scriptorium','cloister','arcade','colonnade','niche','alcove','foyer','reading-room','reliquary','librarium','observatory','aviary','cabinet'];
 
 const BOOK_COLORS = [
   '#4a3020', '#3d2818', '#5c3d2e', '#2a1f15', '#1f2a1f',
@@ -5405,12 +5416,14 @@ function hashCoord(x, y) {
 
 function chamberName(x, y) {
   const rng = seededRng(hashCoord(x, y));
-  return CHAMBER_PREFIXES[Math.floor(rng() * CHAMBER_PREFIXES.length)] +
-         CHAMBER_SUFFIXES[Math.floor(rng() * CHAMBER_SUFFIXES.length)];
+  const prefix = CHAMBER_PREFIXES[Math.floor(rng() * CHAMBER_PREFIXES.length)];
+  const suffix = CHAMBER_SUFFIXES[Math.floor(rng() * CHAMBER_SUFFIXES.length)];
+  // Capitalize the suffix so we get "Dorius Hall" not "Dorius hall"
+  return prefix + ' ' + suffix.charAt(0).toUpperCase() + suffix.slice(1);
 }
 
 function chamberDesignation(x, y) {
-  return `Chamber ${chamberName(x, y)} — Level ${y}, Column ${x}`;
+  return `${chamberName(x, y)} — Level ${y}, Column ${x}`;
 }
 
 // ============================================
@@ -5657,7 +5670,7 @@ function renderAtrium() {
   const vaultCount = LIBRARY.books.filter(b => b.restricted).length;
   html += `<div class="wing-card wing-vault" onclick="openVault()">
     <h3>🔒 The Codex Vault</h3>
-    <p>Texts sealed by order of the Triumvirate. Forbidden histories and secrets beneath the fortress.</p>
+    <p>Khorvaire's largest shrine to Aureon. Texts here have been sealed by the Triumvirate &mdash; speak the passphrase, or turn back.</p>
     <div class="count">${vaultCount} sealed volumes</div>
   </div>`;
 
